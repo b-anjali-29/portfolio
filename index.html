@@ -1,51 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>B. Anjali - Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Bolleboina Anjali | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>B. Anjali</h1>
-        <p>GenAI & AI/ML Enthusiast</p>
-    </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hard-working, goal-oriented, and a team player seeking opportunities to put my AI/ML skills to use and grow exponentially in my career.</p>
-    </section>
+<!-- Animated background container -->
+<div class="animated-bg"></div>
 
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <ul>
-            <li>C Language</li>
-            <li>Python</li>
-            <li>Java</li>
-            <li>PyTorch, TensorFlow</li>
-        </ul>
-    </section>
+<header class="header">
+ <img src="profile.jpg" alt="Bolleboina Anjali" class="profile-img">
+  <h1 class="name">Bolleboina Anjali</h1>
+  <p class="role">AI & ML Student | Generative AI Enthusiast</p>
+  <p class="contact">
+     +91-6281843003 | anjalibolleboina5@gmail.com
+  </p>
+  <p class="typing" id="typing"></p>
+</header>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>E-commerce Website for Gadget Rentals:</strong> Flask + MongoDB based Flipkart-like platform with login/auth, admin dashboard, product filters, cart, orders, wishlist.</li>
-            <li><strong>Conditional GAN on CIFAR-10:</strong> Generated class-specific RGB images using noise vectors and labels.</li>
-            <li><strong>Data Visualization using Power BI:</strong> Cleaned and visualized sales data from BikeStore and Super Store datasets.</li>
-        </ul>
-    </section>
+<main>
+  <!-- Career Objective -->
+  <section class="section" id="objective">
+    <h2>Career Objective</h2>
+    <div class="card">
+      <p>Motivated Computer Science student specializing in AI & ML, eager to work on real-world projects. Passionate about deep learning, generative AI, and full-stack development.</p>
+    </div>
+  </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:anjalibolleboina5@gmail.com">anjalibolleboina5@gmail.com</a></p>
-        <p>Mobile: +91-6281843003</p>
-    </section>
+  <!-- Skills -->
+  <section class="section" id="skills">
+    <h2>Technical Skills</h2>
+    <div class="card skills">
+      <span>C</span><span>Python</span><span>Java</span>
+      <span>Machine Learning</span><span>Deep Learning</span>
+      <span>Generative AI</span><span>TensorFlow</span><span>PyTorch</span>
+    </div>
+  </section>
 
-    <footer>
-        <p>© 2025 B. Anjali. All rights reserved.</p>
-    </footer>
+  <!-- Education -->
+  <section class="section" id="education">
+    <h2>Education</h2>
+    <div class="card">
+      <h3>B.Tech CSE (AI & ML)</h3>
+      <p>Gouthami Institute of Technology and Management for Women (2022–2026)</p>
+      <strong>82%</strong>
+    </div>
+    <div class="card">
+      <h3>Class XII</h3>
+      <p>Pragathi Junior College (2020–2022)</p>
+      <strong>82.8%</strong>
+    </div>
+    <div class="card">
+      <h3>SSC</h3>
+      <p>S.B.N.R.M High School (2020)</p>
+      <strong>9.6 GPA</strong>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- Experience -->
+  <section class="section" id="experience">
+    <h2>Internship Experience</h2>
+    <div class="card">
+      <h3>NextHub Technologies Pvt Ltd</h3>
+      <p class="sub">GenAI Research Intern (Jun–Jul 2025)</p>
+      <ul>
+        <li>Implemented GANs, VAEs, Transformers, Stable Diffusion</li>
+        <li>Worked with Hugging Face & PyTorch</li>
+        <li>Prompt engineering & attention visualization</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>1 Stop Platform</h3>
+      <p class="sub">Artificial Intelligence Intern (Feb–Jun 2024)</p>
+      <ul>
+        <li>Model training and evaluation</li>
+        <li>Classification and prediction models</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <h2>Projects</h2>
+    <div class="card project">
+      <h3>Latent Space Visualization</h3>
+      <p>Python, PyTorch, Matplotlib, NumPy</p>
+    </div>
+    <div class="card project">
+      <h3>Music Player App</h3>
+      <p>HTML, CSS, JavaScript</p>
+    </div>
+    <div class="card project">
+      <h3>Quiz Application</h3>
+      <p>HTML, CSS, JavaScript</p>
+    </div>
+    <div class="card project">
+      <h3>Conditional GAN on CIFAR-10</h3>
+      <p>PyTorch</p>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="section" id="certifications">
+    <h2>Certifications</h2>
+    <div class="card">
+      <ul>
+        <li>C Language Certification</li>
+        <li>Git & GitHub Training</li>
+        <li>Hackathon Participation on Python</li>
+        <li>Generative AI Internship – NextHub Technologies Pvt.Lmt</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Languages & Soft Skills -->
+  <section class="section" id="languages">
+    <h2>Soft Skills & Languages</h2>
+    <div class="card">
+      <p><strong>Soft Skills:</strong> Self-Motivated, Quick Learner, Team Player</p>
+      <p><strong>Languages:</strong> Telugu, English, Hindi</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 Bolleboina Anjali</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

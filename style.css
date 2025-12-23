@@ -1,56 +1,98 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Segoe UI", sans-serif;
+:root {
+  --blue: #2563eb;
+  --green: #10b981;
+  --purple: #7c3aed;
+  --orange: #f97316;
+  --teal: #06b6d4;
+  --dark: #0f172a;
+  --light: #f8fafc;
 }
 
-body {
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-    padding: 20px;
+* {margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif;}
+body {position:relative; overflow-x:hidden; background:#f8fafc; color:var(--dark); line-height:1.6;}
+
+/* ================= ANIMATED BACKGROUND ================= */
+.animated-bg {
+  position: fixed; top:0; left:0; width:100%; height:100%; z-index:-1;
+  background: linear-gradient(270deg, #2563eb, #10b981, #7c3aed, #f97316, #06b6d4);
+  background-size: 1000% 1000%;
+  animation: gradientMove 30s ease infinite;
+  filter: brightness(0.95);
 }
 
-header, footer {
-    text-align: center;
-    padding: 20px;
-    background: #007acc;
-    color: white;
+/* ================= HEADER ================= */
+.header {text-align:center; padding:100px 20px; color:white; overflow:hidden;}
+.profile-img {
+  width: 250px;       /* increased size */
+  height: 250px;      /* increased size */
+  border-radius: 50%; /* keeps it circular */
+  border: 6px solid white;
+  object-fit: cover;
+  box-shadow:
+    0 0 30px rgba(16,185,129,0.8),
+    0 0 50px rgba(124,58,237,0.6);
+  transition: transform 0.6s ease;
 }
 
-header h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
+/* Hover effect */
+.profile-img:hover {
+  transform: rotate(-3deg) scale(1.1);
 }
 
-section {
-    background: white;
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 700px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .profile-img {
+    width: 180px;
+    height: 180px;
+  }
 }
 
-section h2 {
-    margin-bottom: 10px;
-    color: #007acc;
+box-shadow:0 0 25px rgba(16,185,129,0.8),0 0 45px rgba(124,58,237,0.6);transition:transform 0.6s ease;}
+.profile-img:hover{transform: rotate(-3deg) scale(1.1);}
+.name{font-size:32px; font-weight:700; letter-spacing:1px; animation: fadeIn 1.5s ease forwards;}
+.role{margin-top:10px;font-size:18px;opacity:0.95;}
+.contact{margin-top:10px;font-size:15px;}
+.typing{font-size:16px;margin-top:12px; color:#fff; min-height:20px;}
+
+/* ================= SECTIONS ================= */
+.section{max-width:1150px;margin:80px auto;padding:0 20px;}
+..section h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, var(--blue), var(--green), var(--purple), var(--orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+
+  /* NEW - backdrop for visibility */
+  padding: 4px 12px;
+  border-radius: 8px;
+  background-color: rgba(0,0,0,0.25); /* dark transparent */
+  display: inline-block;
+
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
 
-ul {
-    list-style: disc inside;
-}
+/* ================= CARDS ================= */
+.card{position:relative;background:rgba(255,255,255,0.85);backdrop-filter:blur(14px);
+padding:28px;border-radius:22px;margin-bottom:30px;box-shadow:0 30px 60px rgba(0,0,0,0.08);
+transition:all 0.5s ease;overflow:hidden;transform:translateY(60px) scale(0.95);opacity:0;}
+.card:hover{transform: translateY(-12px) scale(1.02); box-shadow:0 40px 80px rgba(0,0,0,0.15);}
+.card h3{color:var(--blue); margin-bottom:6px;}
+.sub{color:#475569; font-size:14px;}
 
-a {
-    color: #007acc;
-    text-decoration: none;
-}
+/* ================= SKILLS ================= */
+.skills{display:flex;flex-wrap:wrap;}
+.skills span{padding:12px 22px;margin:10px;border-radius:40px;font-size:14px;font-weight:600;color:white;
+background: linear-gradient(135deg, var(--blue), var(--green)); box-shadow:0 10px 25px rgba(37,99,235,0.4);
+animation: floatPulse 3s infinite; transition: all 0.4s ease;}
+.skills span:nth-child(2n){background: linear-gradient(135deg, var(--purple), var(--orange));}
+.skills span:hover{transform:scale(1.2); box-shadow:0 0 30px rgba(124,58,237,0.8);}
 
-a:hover {
-    text-decoration: underline;
-}
+/* ================= FOOTER ================= */
+footer{background: linear-gradient(135deg, #020617, #064e3b, #1e1b4b); color:white;text-align:center;padding:22px;letter-spacing:1px;animation: gradientMove 30s ease infinite;}
 
-footer {
-    margin-top: 40px;
-}
+/* ================= ANIMATIONS ================= */
+@keyframes gradientMove{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes floatPulse{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+@keyframes fadeIn{0%{opacity:0; transform:translateY(-10px)}100%{opacity:1; transform:translateY(0)}}
